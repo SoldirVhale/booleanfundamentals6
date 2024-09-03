@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+    row-gap: 20px;
+}
+
+.product {
+    position: relative;
+}
+
+.discount {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.big {
+    background-color: green;
+}
+
+.small {
+    background-color: red;
+}
+
+.favorite {
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    color: red;
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.product:hover .favorite {
+    opacity: 1;
+}
